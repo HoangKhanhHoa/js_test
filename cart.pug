@@ -1,0 +1,30 @@
+extend pug/_layout
+
+block main
+  //body
+  section.container
+    .cart
+      h2.cart__title Giỏ hàng
+    .cart-detail
+      .cart-detail__table
+        table
+          tr
+            td
+              .td-img1 ảnh
+            td
+              .td-name1 tên sản phẩm
+            td
+              .td-price1 giá
+            td
+              .td-amount1 số lượng
+            td
+              .td-total1 tổng số
+            td
+              .td-delete1 xóa
+          tr.tr-cart
+      .cart-form
+        button.cart-form__continue(type="submit", onclick="continueBuy()") Tiếp tục mua hàng
+        button.cart-form__paid(type="submit", onclick="showPayment()") Thanh toán
+        button.cart-form__delete(type="submit") Xóa
+        button.cart-form__update(type="submit") Cập nhật
+  script(src='js/cart.js')
